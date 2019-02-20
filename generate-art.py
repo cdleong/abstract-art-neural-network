@@ -87,7 +87,7 @@ def run_plot_save(net, size_x, size_y, fig_size=8):
 if __name__ == "__main__":
     args = get_args()
     
-    # there's a  in gen_new_image.
+    # there's a bug in gen_new_image. x and y are switched. 
     size_x = args.size_y
     size_y = args.size_x
     for i in range(args.num_pics):
