@@ -1,0 +1,8 @@
+name: art-nn
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - pillow
+  - pytorch
