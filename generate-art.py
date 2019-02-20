@@ -16,9 +16,9 @@ def get_args():
     parser.add_argument('-x', "--size_x", default=128, dest="size_x", help='x dimension of picture', type=int)
     parser.add_argument('-y', "--size_y", default=128, dest="size_y", help='y dimension of picture', type=int)
     parser.add_argument('-n', "--num_pics", default=1, dest="num_pics", help='number of images to generate', type=int, choices=range(1,20))
-    # if more that 20, we get errors: /home/cdleong/miniconda3/envs/art-nn/lib/python3.7/site-packages/matplotlib/pyplot.py:514: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+    # if more than 20, we get errors: /home/cdleong/miniconda3/envs/art-nn/lib/python3.7/site-packages/matplotlib/pyplot.py:514: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
 
-    # TODO: option arguments num_neurons, num_;auers, activateion
+    # TODO: option arguments num_neurons, num_layers, activation
     return parser.parse_args()
 
 
@@ -90,5 +90,5 @@ if __name__ == "__main__":
     # there's a  in gen_new_image.
     size_x = args.size_y
     size_y = args.size_x
-    for i in range(0, args.num_pics):
+    for i in range(args.num_pics):
         gen_new_image(size_x, size_y)
